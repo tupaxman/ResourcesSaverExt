@@ -815,7 +815,7 @@ function downloadURLs(urls, callback) {
 function downloadZipFile(toDownload, callback) {
     if (zip) {
         zip.workerScriptsPath = "zip/";
-        getAllToDownloadContent(toDownload, function (result) {
+        getAllToDownloadContent(toDownload.splice(0, 1000), function (result) {
             // console.log('All ToDownload: ',result);
             // window.alll = result;
             //Double check duplicated
